@@ -1,0 +1,1 @@
+Model's parameters: {'alphabet': 'abcdefghijklmnopqrstuvwxyz0123456789,;.!?:\'"/\\|_@#$%^&*~`+-=<>()[]{}', 'max_length': 1014, 'feature': 'small', 'optimizer': 'sgd', 'batch_size': 128, 'num_epochs': 20, 'lr': 0.001, 'dataset': 'agnews', 'es_min_delta': 0.0, 'es_patience': 3, 'input': '../data/ag_news_csv', 'output': 'output/ag_news_small', 'log_path': 'tensorboard/char-cnn'}

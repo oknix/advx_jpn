@@ -21,27 +21,12 @@ def get_evaluation(y_true, y_prob, list_metrics):
 
 def get_default_folder(dataset, feature):
     if dataset == "agnews":
-        input = "input/ag_news_csv"
+        input = "../data/ag_news_csv"
         output = "output/ag_news"
     elif dataset == "dbpedia":
-        input = "input/dbpedia_csv"
+        input = "../data/dbpedia_csv"
         output = "output/dbpedia"
-    elif dataset == "yelp_review":
-        input = "input/yelp_review_full_csv"
-        output = "output/yelp_review_full"
-    elif dataset == "yelp_review_polarity":
-        input = "input/yelp_review_polarity_csv"
-        output = "output/yelp_review_polarity"
-    elif dataset == "amazon_review":
-        input = "input/amazon_review_full_csv"
-        output = "output/amazon_review_full"
-    elif dataset == "amazon_polarity":
-        input = "input/amazon_review_polarity_csv"
-        output = "output/amazon_review_polarity"
-    elif dataset == "sogou_news":
-        input = "input/sogou_news_csv"
-        output = "output/sogou_news"
-    elif dataset == "yahoo_answers":
-        input = "input/yahoo_answers_csv"
-        output = "output/yahoo_answers"
+    elif dataset == "chABSA":
+        input = "../data/chABSA"
+        output = "output/chABSA"
     return input, output + "_" + feature

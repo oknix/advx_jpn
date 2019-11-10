@@ -30,8 +30,7 @@ def get_args():
     parser.add_argument("-n", "--num_epochs", type=int, default=20)
     parser.add_argument("-l", "--lr", type=float, default=0.001)  # recommended learning rate for sgd is 0.01, while for adam is 0.001
     parser.add_argument("-d", "--dataset", type=str,
-                        choices=["agnews", "dbpedia", "yelp_review", "yelp_review_polarity", "amazon_review",
-                                 "amazon_polarity", "sogou_news", "yahoo_answers"], default="yelp_review_polarity",
+                        choices=["agnews", "dbpedia", "chABSA"], default="agnews",
                         help="public dataset used for experiment. If this parameter is set, parameters input and output are ignored")
     parser.add_argument("-y", "--es_min_delta", type=float, default=0.0,
                         help="Early stopping's parameter: minimum change loss to qualify as an improvement")
@@ -49,8 +48,7 @@ def train(opt):
         torch.cuda.manual_seed(123)
     else:
         torch.manual_seed(123)
-    if opt.dataset in ["agnews", "dbpedia", "yelp_review", "yelp_review_polarity", "amazon_review",
-                       "amazon_polarity", "sogou_news", "yahoo_answers"]:
+    if opt.dataset in ["agnews", "dbpedia", "chABSA"]:
         opt.input, opt.output = get_default_folder(opt.dataset, opt.feature)
 
     if not os.path.exists(opt.output):
